@@ -1,0 +1,34 @@
+@import 'typography';
+@import 'variables';
+@import 'animate';
+@import 'weatherdetail';
+@import 'weatherlist';
+
+body {
+  background-color: $lightBlue;
+  font-family: $lato;
+  color: white;
+}
+
+h1, h2, h3, h4 {
+  color: darkslategray;
+}
+
+input, a {
+  color: darkslategray;
+}
+
+input {
+  font-size: 3em;
+}
+
+button {
+  margin: 10px;
+}
+
+.jumbotron {
+  opacity: .6;
+  & h1, h2, h3, h4 {
+    color: darkslategray;
+  }
+}

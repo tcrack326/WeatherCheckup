@@ -1,0 +1,42 @@
+<div class="weatherList">
+<div class="jumbotron">
+    <div class="container">
+       <h1><i class="fa fa-cloud"></i> Weather Checkup</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <form name="weatherForm" ng-submit="weatherListVM.getWeatherDataByZip()">
+          <div class="col-sm-12">
+            <label class="zipCodeLabel">Enter a Zip Code to get Current Weather for that Area</label>
+          </div>
+            <div class="col-xs-12">
+              <input class="zipInput" name="zipCode" maxlength="5" type="text" ng-model="weatherListVM.weatherZip">
+              <button ng-click="weatherListVM.getWeatherDataByZip()" type="button" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+  </div>
+  <div class="row">
+    <section class="col-sm-12 margin-top-10">
+        <ul>
+                <li class="weatherLocaleItem"  ng-repeat="locale in weatherListVM.weatherLocales track by locale.id">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h3><a ui-sref="detail({locale: locale})">{{locale.name}}</a></h3>
+                      <h4>{{locale.weather[0].main}} {{locale.main.temp}}&#176;</h4>
+                      <p>
+                        Current Temp: {{locale.main.temp}}&#176;
+                        Humidity: {{locale.main.humidity}}%
+                        High Temp: {{locale.main.temp_max}}&#176;
+                        Low Temp: {{locale.main.temp_min}}&#176;
+                      </p>
+                    </div>
+                  </div>
+                </li>
+        </ul>
+    </section>
+</div>
+</div>
+
+

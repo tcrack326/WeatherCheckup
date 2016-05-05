@@ -1,0 +1,32 @@
+<div class="jumbotron">
+
+    <h1> <i class="fa fa-sun-o"></i> {{weatherDetailVM.locale.name}}</h1>
+    <p>{{weatherDetailVM.locale.weather[0].main}}</p>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <h2 class="temp">{{weatherDetailVM.locale.weather[0].main}} {{weatherDetailVM.locale.main.temp}}&#176;</h2>
+  </div>
+</div>
+<div class="row detail">
+    <div class="col-sm-12">
+      <h3>Summary</h3>
+    <p>
+
+        Current Temp: {{weatherDetailVM.locale.main.temp}}&#176;
+        Humidity: {{weatherDetailVM.locale.main.humidity}}%
+        High Temp: {{weatherDetailVM.locale.main.temp_max}}&#176;
+        Low Temp: {{weatherDetailVM.locale.main.temp_min}}&#176;
+    </p>
+        </div>
+</div>
+<div class="row detail">
+  <div class="col-sm-12">
+    <h3>Wind</h3>
+      <p>
+        Avg. Wind Speed: {{weatherDetailVM.locale.wind.speed}}mph
+        Direction: {{weatherDetailVM.locale.wind.deg}}&#176;
+        Gust: {{weatherDetailVM.locale.wind.gust}}
+      </p>
+  </div>
+</div>
